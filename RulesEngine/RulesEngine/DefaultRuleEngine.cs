@@ -30,26 +30,25 @@ namespace RulesEngine
             return results;
         }
 
-        public List<BrokenRule> ValidateOldNotUsed(T value)
+        public override void BuildRuleSet()
         {
-            var results = new List<BrokenRule>();
+            var value = typeof(T);
 
-            var props = value.GetType().GetProperties();
+            var props = value.GetProperties();
 
-            foreach(var prop in props)
+            foreach (var prop in props)
             {
-                var rules = prop.GetCustomAttributes(typeof(ValidationAttribute), true);
-                foreach (var rule in rules)
+                var rulesAttrs = prop.GetCustomAttributes(typeof(ValidationAttribute), true);
+
+                var ruleItems = new List<ValidationAttribute>();
+
+                foreach (var rule in rulesAttrs)
                 {
                     var ruleAttribute = rule as ValidationAttribute;
-                    var ruleResult = ruleAttribute.Validate(prop.GetValue(value), new ValidationContext { SourceObject = value });
-                    if (ruleResult.IsBroken)
-                    {
-                        results.Add(ruleResult);
-                    }
+                    ruleItems.Add(ruleAttribute);
                 }
+                Rules[prop.Name] = ruleItems;
             }
-            return results;
         }
     }
 }

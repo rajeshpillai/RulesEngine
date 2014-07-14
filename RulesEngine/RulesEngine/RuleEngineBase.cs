@@ -11,31 +11,12 @@ namespace RulesEngine
     {
         public Dictionary<string, List<ValidationAttribute>> Rules { get; set; }
 
+        public abstract void BuildRuleSet();
+
         public RuleEngineBase()
         {
             Rules = new Dictionary<string, List<ValidationAttribute>>();
-            BuildRuleset();
-        }
-
-        public void BuildRuleset()
-        {
-            var value = typeof(T);
-
-            var props = value.GetProperties();
-
-            foreach (var prop in props)
-            {
-                var rulesAttrs = prop.GetCustomAttributes(typeof(ValidationAttribute), true);
-
-                var ruleItems = new List<ValidationAttribute>();
-
-                foreach (var rule in rulesAttrs)
-                {
-                    var ruleAttribute = rule as ValidationAttribute;
-                    ruleItems.Add(ruleAttribute);
-                }
-                Rules[prop.Name] = ruleItems;
-            }
+            BuildRuleSet();
         }
 
     }

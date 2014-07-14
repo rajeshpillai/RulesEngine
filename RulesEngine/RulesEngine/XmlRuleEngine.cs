@@ -9,6 +9,10 @@ namespace RulesEngine
 {
     public class XmlRuleEngine<T> : RuleEngineBase<T>, IRuleEngine<T>
     {
+        public override void BuildRuleSet()
+        {
+        }
+
         public List<BrokenRule> Validate(T value)
         {
             var results = new List<BrokenRule>();
