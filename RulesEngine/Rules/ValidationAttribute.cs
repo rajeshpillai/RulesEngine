@@ -22,6 +22,6 @@ namespace RulesEngine.Rules
             this.Message = message;
         }
 
-        public abstract BrokenRule Validate(object value);
+        public abstract BrokenRule Validate(object value, ValidationContext context);
     }
 }

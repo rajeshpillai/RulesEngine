@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace RulesEngine.Rules
 {
-    public class RequiredFieldAttribute : ValidationAttribute
+    public class CompareFieldAttribute : ValidationAttribute
     {
-        public RequiredFieldAttribute() : base()
+        public CompareFieldAttribute() : base()
         {
 
         }
-        public RequiredFieldAttribute(string name, string message) : base(name, message)
+        public CompareFieldAttribute(string name, string message)
+            : base(name, message)
         {
         }
 
@@ -20,7 +22,9 @@ namespace RulesEngine.Rules
         {
             BrokenRule rule = new BrokenRule();
 
-            if (null == value || string.IsNullOrWhiteSpace(value.ToString()))
+            var targetField = context.SourceObject.GetType().GetProperty(this.Name);
+
+            if (value != targetField.GetValue(context.SourceObject))
             {
                 rule.IsBroken = true;
                 rule.ErrorMessage = this.Message;

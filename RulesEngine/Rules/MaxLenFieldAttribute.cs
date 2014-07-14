@@ -20,7 +20,7 @@ namespace RulesEngine.Rules
             this.Max = max;
         }
 
-        public override BrokenRule Validate(object value)
+        public override BrokenRule Validate(object value, ValidationContext context)
         {
             BrokenRule rule = new BrokenRule();
             

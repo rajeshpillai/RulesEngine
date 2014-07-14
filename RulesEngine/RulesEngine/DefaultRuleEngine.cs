@@ -21,7 +21,7 @@ namespace RulesEngine
                 foreach (var rule in rules)
                 {
                     var ruleAttribute = rule as ValidationAttribute;
-                    var ruleResult = ruleAttribute.Validate(prop.GetValue(value));
+                    var ruleResult = ruleAttribute.Validate(prop.GetValue(value), new ValidationContext { SourceObject = value });
                     if (ruleResult.IsBroken)
                     {
                         results.Add(ruleResult);

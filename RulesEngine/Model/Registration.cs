@@ -17,5 +17,9 @@ namespace RulesEngine.Model
 
         [RequiredField("Email", "Email cannot be empty")]
         public string Email { get; set; }
+
+        [CompareField("Email", "Email is not the same")]
+        public string EmailConfirm { get; set; }
+
     }
 }

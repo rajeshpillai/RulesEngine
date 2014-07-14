@@ -45,11 +45,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\BrokenRule.cs" />
+    <Compile Include="Rules\CompareFieldAttribute.cs" />
     <Compile Include="Rules\MaxLenFieldAttribute.cs" />
     <Compile Include="RulesEngine\DefaultRuleEngine.cs" />
     <Compile Include="RulesEngine\IRuleEngine.cs" />
     <Compile Include="Rules\RequiredFieldAttribute.cs" />
     <Compile Include="Rules\ValidationAttribute.cs" />
+    <Compile Include="Rules\ValidationContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

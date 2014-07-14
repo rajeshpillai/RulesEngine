@@ -11,13 +11,14 @@ namespace RulesEngine
     class Program
     {
         static void Main(string[] args)
-        {
+    {
             Registration register = new Registration();
             IRuleEngine<Registration> ruleEngine = new DefaultRuleEngine<Registration>();
 
             register.UserName = "rajeshrajeshrajeeshrajeshrajesh";
             register.Password = "test123";
-            register.Email = "";
+            register.Email = "test@t.com";
+            register.EmailConfirm = "test@t.com";
 
             var results = ruleEngine.Validate(register);
 
