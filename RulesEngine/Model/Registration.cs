@@ -7,6 +7,7 @@ using RulesEngine.Rules;
 
 namespace RulesEngine.Model
 {
+    [RuleEngineType(RuleType = typeof(DefaultRuleEngine<Registration>))]
     public class Registration
     {
         [RequiredField("UserName", "User name cannot be empty")]
@@ -20,6 +21,5 @@ namespace RulesEngine.Model
 
         [CompareField("Email", "Email is not the same")]
         public string EmailConfirm { get; set; }
-
     }
 }

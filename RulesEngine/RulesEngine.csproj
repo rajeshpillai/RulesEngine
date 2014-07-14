@@ -42,10 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Registration.cs" />
+    <Compile Include="Model\Task.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RulesEngine\RuleEngineBase.cs" />
+    <Compile Include="RulesEngine\RuleEngineFactory.cs" />
+    <Compile Include="RulesEngine\XmlRuleEngine.cs" />
     <Compile Include="Rules\BrokenRule.cs" />
     <Compile Include="Rules\CompareFieldAttribute.cs" />
+    <Compile Include="Rules\RuleEngineTypeAttribute.cs" />
     <Compile Include="Rules\MaxLenFieldAttribute.cs" />
     <Compile Include="RulesEngine\DefaultRuleEngine.cs" />
     <Compile Include="RulesEngine\IRuleEngine.cs" />
@@ -55,6 +60,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Task.rules.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

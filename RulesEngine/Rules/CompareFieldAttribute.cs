@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace RulesEngine.Rules
 {
+    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property)]
     public class CompareFieldAttribute : ValidationAttribute
     {
         public CompareFieldAttribute() : base()

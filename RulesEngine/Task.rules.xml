@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Task>
+  <Email>
+    <Rules>
+      <add ruleType="RequiredField" value="Email cannot be empty."/>
+    </Rules>
+  </Email>
+  <Description>
+    <Rules>
+      <add ruleType="RequiredField" value="Description is required"/>
+      <add ruleType="MaxLenField" value ="100"/>
+    </Rules>
+  </Description>
+</Task>

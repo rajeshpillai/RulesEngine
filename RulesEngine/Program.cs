@@ -13,7 +13,8 @@ namespace RulesEngine
         static void Main(string[] args)
     {
             Registration register = new Registration();
-            IRuleEngine<Registration> ruleEngine = new DefaultRuleEngine<Registration>();
+
+            IRuleEngine<Registration> ruleEngine = RuleEngineFactory<Registration>.GetEngine(); 
 
             register.UserName = "rajeshrajeshrajeeshrajeshrajesh";
             register.Password = "test123";

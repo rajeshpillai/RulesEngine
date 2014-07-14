@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RulesEngine.Rules
 {
+    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property)]
     public class MaxLenFieldAttribute : ValidationAttribute
     {
         public int Max { get; set; }
@@ -33,7 +34,6 @@ namespace RulesEngine.Rules
                     rule.ErrorMessage = this.Message;
                 }
             }
-
             return rule;
         }
     }
