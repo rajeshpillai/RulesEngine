@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleGame", "CSharpFundas\ConsoleGame.csproj", "{794100E4-EAEE-414A-A311-70DF11D7503C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InterfaceDemo", "InterfaceDemo", "{3B8829A3-DF45-45BD-9629-C9F7ADFB7D7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxJumpGame", "BoxJumpGame\BoxJumpGame.csproj", "{B18A3209-80FD-4CAD-BD7D-46A6ADF5BE6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RulesEngine", "RulesEngine\RulesEngine.csproj", "{FE717D50-3C78-454E-999C-2848661C4D13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{794100E4-EAEE-414A-A311-70DF11D7503C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{794100E4-EAEE-414A-A311-70DF11D7503C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{794100E4-EAEE-414A-A311-70DF11D7503C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{794100E4-EAEE-414A-A311-70DF11D7503C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B18A3209-80FD-4CAD-BD7D-46A6ADF5BE6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B18A3209-80FD-4CAD-BD7D-46A6ADF5BE6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B18A3209-80FD-4CAD-BD7D-46A6ADF5BE6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B18A3209-80FD-4CAD-BD7D-46A6ADF5BE6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE717D50-3C78-454E-999C-2848661C4D13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE717D50-3C78-454E-999C-2848661C4D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE717D50-3C78-454E-999C-2848661C4D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE717D50-3C78-454E-999C-2848661C4D13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{794100E4-EAEE-414A-A311-70DF11D7503C} = {3B8829A3-DF45-45BD-9629-C9F7ADFB7D7C}
+		{B18A3209-80FD-4CAD-BD7D-46A6ADF5BE6D} = {3B8829A3-DF45-45BD-9629-C9F7ADFB7D7C}
+		{FE717D50-3C78-454E-999C-2848661C4D13} = {3B8829A3-DF45-45BD-9629-C9F7ADFB7D7C}
+	EndGlobalSection
+EndGlobal
