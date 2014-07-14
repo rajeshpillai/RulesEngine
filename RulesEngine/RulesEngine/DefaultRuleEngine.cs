@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RulesEngine.Rules;
+
 namespace RulesEngine
 {
     public class DefaultRuleEngine<T> : RuleEngineBase<T>, IRuleEngine<T>

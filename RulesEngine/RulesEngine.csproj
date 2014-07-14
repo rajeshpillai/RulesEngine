@@ -48,7 +48,7 @@
     <Compile Include="RulesEngine\RuleEngineBase.cs" />
     <Compile Include="RulesEngine\RuleEngineFactory.cs" />
     <Compile Include="RulesEngine\XmlRuleEngine.cs" />
-    <Compile Include="Rules\BrokenRule.cs" />
+    <Compile Include="RulesEngine\BrokenRule.cs" />
     <Compile Include="Rules\CompareFieldAttribute.cs" />
     <Compile Include="Rules\RuleEngineTypeAttribute.cs" />
     <Compile Include="Rules\MaxLenFieldAttribute.cs" />
@@ -56,7 +56,7 @@
     <Compile Include="RulesEngine\IRuleEngine.cs" />
     <Compile Include="Rules\RequiredFieldAttribute.cs" />
     <Compile Include="Rules\ValidationAttribute.cs" />
-    <Compile Include="Rules\ValidationContext.cs" />
+    <Compile Include="RulesEngine\ValidationContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
