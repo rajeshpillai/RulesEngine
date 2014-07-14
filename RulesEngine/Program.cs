@@ -23,7 +23,7 @@ namespace RulesEngine
 
             foreach (var r in results)
             {
-                if (!r.IsValid)
+                if (r.IsBroken)
                 {
                     Console.WriteLine("{0} rule is broken and the error is {1}", r.Name, r.ErrorMessage);
                 }

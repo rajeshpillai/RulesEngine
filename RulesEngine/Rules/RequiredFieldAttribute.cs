@@ -22,7 +22,7 @@ namespace RulesEngine.Rules
 
             if (null == value || string.IsNullOrWhiteSpace(value.ToString()))
             {
-                rule.IsValid = false;
+                rule.IsBroken = true;
                 rule.ErrorMessage = this.Message;
                 rule.Name = this.Name;
             }

@@ -23,13 +23,12 @@ namespace RulesEngine.Rules
         public override BrokenRule Validate(object value)
         {
             BrokenRule rule = new BrokenRule();
-            rule.IsValid = true;
-
+            
             if (null != value || !string.IsNullOrWhiteSpace(value.ToString()))
             {
                 if (value.ToString().Length >= Max)
                 {
-                    rule.IsValid = false;
+                    rule.IsBroken = true;
                     rule.Name = this.Name;
                     rule.ErrorMessage = this.Message;
                 }

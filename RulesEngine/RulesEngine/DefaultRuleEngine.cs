@@ -22,7 +22,7 @@ namespace RulesEngine
                 {
                     var ruleAttribute = rule as ValidationAttribute;
                     var ruleResult = ruleAttribute.Validate(prop.GetValue(value));
-                    if (!ruleResult.IsValid)
+                    if (ruleResult.IsBroken)
                     {
                         results.Add(ruleResult);
                     }

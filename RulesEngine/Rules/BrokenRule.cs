@@ -10,11 +10,11 @@ namespace RulesEngine.Rules
     {
         public string Name { get; set; }
         public string ErrorMessage { get; set; }
-        public bool IsValid { get; set; }
+        public bool IsBroken { get; set; }
 
         public BrokenRule()
         {
-            IsValid = true;
+            IsBroken = false;
         }
     }
 }
